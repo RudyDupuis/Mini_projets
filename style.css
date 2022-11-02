@@ -1,0 +1,73 @@
+/*#316879 foncéBleuVert  #7fe7dc clairBleuTurq   #ced7d8 Gris  #f47a60 orange */
+
+body{
+    background: #f3f6f7;
+    color: #316879;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    overflow-x: hidden;
+    margin: 0;
+}
+
+h1::before, footer::after{
+    content:"";
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    width: 120vw;
+    background: #ced7d8;
+}
+
+h1::before{
+    top: -100px;
+    rotate: 5deg;
+    height: 200px;
+}
+
+footer::after{
+    bottom: -100px;
+    rotate: -2deg;
+    height: 450px;
+}
+
+a{
+    text-decoration: none;
+    color: #316879;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    margin: 0px 50px;
+    overflow: hidden;
+}
+
+.button{
+    color: #f3f6f7;
+    font-weight: bold;
+    background: #316879;
+    border-radius: 10px;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.description{
+    transform: translateY(300px);
+    font-weight: bold;
+}
+
+.description p:last-child{
+    color: #295360;
+}
+
+@media (max-width: 800px){
+    section{
+        justify-content: center;
+    }
+}
