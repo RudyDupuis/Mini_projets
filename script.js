@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll('.button');
 const descriptions = document.querySelectorAll('.description');
 const cards = document.querySelectorAll('.card');
 
-for(let i=0; i < 2; i++){
+for(let i=0; i < 3; i++){
     buttons[i].addEventListener ('click', () => {
         buttons[i].remove();
         cards[i].style.height = "100%";
