@@ -1,0 +1,329 @@
+/** Base **/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+a:visited {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Signik";
+  src: url(../fonts/SignikaNegative-VariableFont_wght.ttf);
+}
+.calls {
+  background: none;
+  border: none;
+  width: 70%;
+  outline: none;
+  margin: 20px auto;
+}
+
+.checkbox-btn {
+  border: 2px solid rgb(171, 171, 171);
+  color: rgb(171, 171, 171);
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+[type=checkbox] {
+  display: none;
+}
+[type=checkbox]:checked + .checkbox-btn {
+  border-color: rgb(40, 40, 40);
+  color: rgb(40, 40, 40);
+}
+
+.cross-btn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 1px 4px !important;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  background: #eee !important;
+}
+
+.small-btn {
+  background: none;
+  padding: 5px 10px;
+  border: 2px solid rgb(40, 40, 40);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Signik", sans-serif;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.small-btn:hover {
+  transform: scale(1.1);
+}
+.small-btn:active {
+  transform: scale(0.9);
+}
+
+body {
+  background: url(../images/BackgroundSpeed.webp) fixed center/cover;
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Signik", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+body h1 {
+  color: #eee;
+  padding: 40px 0 60px;
+}
+body h1 span {
+  font-size: 1.5rem;
+}
+
+#return {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: #eee;
+  color: rgb(40, 40, 40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+.callsCopy-container {
+  width: 33%;
+  height: 100%;
+  background: #eee;
+  border-left: 3px solid rgb(40, 40, 40);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  transition: all 0.5s;
+  transform: translateX(100%);
+}
+@media screen and (max-width: 1400px) {
+  .callsCopy-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .callsCopy-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .callsCopy-container {
+    width: 100%;
+  }
+}
+.callsCopy-container-open {
+  transform: translateX(0);
+}
+
+#resetSave {
+  margin: 20px 0 60px;
+}
+
+.callsCopy {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.callsCopy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+  border: 3px solid #eee;
+  border-radius: 10%;
+  background: none;
+  cursor: pointer;
+  z-index: 5;
+}
+.callsCopy-btn div {
+  height: 3px;
+  width: 80%;
+  border-radius: 20%;
+  background: #eee;
+  margin: 18% auto;
+  transition: all 0.5s;
+}
+.callsCopy-btn-open {
+  border-color: rgb(40, 40, 40);
+}
+.callsCopy-btn-open div {
+  background: rgb(40, 40, 40);
+}
+.callsCopy-btn-open div:first-child {
+  transform: rotate(45deg) translateY(250%) translateX(22%);
+}
+.callsCopy-btn-open div:nth-child(2) {
+  visibility: hidden;
+}
+.callsCopy-btn-open div:last-child {
+  transform: rotate(-45deg) translateY(-250%) translateX(22%);
+}
+
+.main-callsCopyOpen {
+  filter: brightness(20%);
+}
+
+.sass {
+  background: #eee;
+  width: 80%;
+  margin: 0 auto;
+}
+.sass h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 20px 0;
+  position: relative;
+}
+.sass h2:before, .sass h2:after {
+  content: "";
+  display: block;
+  width: 33%;
+  height: 1px;
+  background: rgb(171, 171, 171);
+  position: absolute;
+  top: 50%;
+}
+@media screen and (max-width: 800px) {
+  .sass h2:before, .sass h2:after {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sass h2:before, .sass h2:after {
+    width: 20%;
+  }
+}
+.sass h2:before {
+  right: 5%;
+}
+.sass h2:after {
+  left: 5%;
+}
+
+.placeholder {
+  width: 90%;
+  margin: 0 auto;
+}
+.placeholder h3 {
+  text-align: left;
+}
+
+#sassForm {
+  width: 90%;
+  margin: 20px auto;
+}
+#sassForm h4 {
+  text-align: left;
+}
+
+#placeholderCheckboxList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 1200px) {
+  #placeholderCheckboxList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 800px) {
+  #placeholderCheckboxList {
+    grid-template-columns: 1fr;
+  }
+}
+
+#newPlaceholder {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+}
+#newPlaceholder h5 {
+  text-align: left;
+}
+#newPlaceholder div {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-areas: "per name open" "prop prop close";
+  gap: 10px;
+  margin: 20px 0;
+}
+#newPlaceholder div input,
+#newPlaceholder div textarea {
+  background: none;
+  outline: none;
+  border: 2px solid rgb(171, 171, 171);
+  font-family: "Signik", sans-serif;
+  font-size: 0.9rem;
+}
+#newPlaceholder #newPlaceholderProperty {
+  grid-area: prop;
+  resize: none;
+}
+
+.utilsCopy-Container {
+  text-align: left;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.utilsCopy-Container button {
+  position: absolute;
+  background: #eee;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -50%);
+}
+.utilsCopy-Container .utilsCopy {
+  border: 2px dashed rgb(40, 40, 40);
+  border-radius: 10px;
+  min-height: 200px;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+footer {
+  color: #eee;
+  margin-top: 50px;
+  padding: 30px 0;
+  background: rgba(122, 122, 122, 0.437);
+}
+footer p {
+  margin-bottom: 20px;
+}
+footer a,
+footer a:visited {
+  color: #eee;
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+footer a:hover,
+footer a:visited:hover {
+  color: rgb(40, 40, 40);
+}

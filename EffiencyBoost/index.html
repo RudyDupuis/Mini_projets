@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/images/efficiencyboost-favicon.png" />
+    <link rel="stylesheet" href="./assets/style/index.css" />
+    <title>EfficiencyBoost</title>
+
+    <script src="https://kit.fontawesome.com/5b87c65c4b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="../index.html">
+        <div id="return">
+            <p>
+                < </p>
+        </div>
+    </a>
+    <section class="callsCopy-container" id="callsCopyContainer">
+        <button id="resetSave" class="small-btn">Réinitialiser</button>
+        <div class="callsCopy">Aucun élément à copier</div>
+    </section>
+
+    <button class="callsCopy-btn" id="callsCopyBtn">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+
+    <main>
+        <h1>EfficiencyBoost <br> <span>Améliore la rapididé de code pour les Front-End</span></h1>
+        <section class="sass">
+            <h2>Sass</h2>
+
+            <div class="placeholder">
+                <h3>Placeholder</h3>
+                <form id="sassForm">
+                    <h4>Display : flex;</h4>
+                    <div id="placeholderCheckboxList"></div>
+                    <input type="submit" value="Choisir" class="small-btn">
+                </form>
+
+                <form id="newPlaceholder">
+                    <h5>Ajouter des placeholders</h5>
+                    <div>
+                        <p>%</p><input type="text" id="newPlaceholderName" minlength="3" required>
+                        <p>{</p>
+                        <textarea id="newPlaceholderProperty" rows="4" minlength="5" required></textarea>
+                        <p>}</p>
+                    </div>
+                    <input type="submit" value="Ajouter" class="small-btn">
+                </form>
+            </div>
+
+            <div class="utilsCopy-Container">
+                <button class="utilsCopyBtn small-btn">Copier</button>
+                <div class="utilsCopy"></div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Site créé par Rudy Dupuis</p>
+            <a href="https://www.linkedin.com/in/rudy-dupuis-26292a240/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/RudyDupuis/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-github"></i></a>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
